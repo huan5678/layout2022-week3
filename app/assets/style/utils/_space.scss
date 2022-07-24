@@ -1,0 +1,141 @@
+@each  $space, $spaceamount in $sizes {
+  .mx-#{$space} {
+    margin-right: #{$spaceamount};
+    margin-left: #{$spaceamount};
+  }
+  .my-#{$space} {
+    margin-top: #{$spaceamount};
+    margin-bottom: #{$spaceamount};
+  }
+  .px-#{$space} {
+    padding-right: #{$spaceamount};
+    padding-left: #{$spaceamount};
+  }
+  .py-#{$space} {
+    padding-top: #{$spaceamount};
+    padding-bottom: #{$spaceamount};
+  }
+}
+
+@each  $space, $spaceamount in $sizes {
+  @include pad {
+    .mx-md-#{$space} {
+      margin-right: #{$spaceamount};
+      margin-left: #{$spaceamount};
+    }
+    .my-md-#{$space} {
+      margin-top: #{$spaceamount};
+      margin-bottom: #{$spaceamount};
+    }
+    .px-md-#{$space} {
+      padding-right: #{$spaceamount};
+      padding-left: #{$spaceamount};
+    }
+    .py-md-#{$space} {
+      padding-top: #{$spaceamount};
+      padding-bottom: #{$spaceamount};
+    }
+  }
+}
+
+@each  $space, $spaceamount in $sizes {
+  @include mobile {
+    .mx-sm-#{$space} {
+      margin-right: #{$spaceamount};
+      margin-left: #{$spaceamount};
+    }
+    .my-sm-#{$space} {
+      margin-top: #{$spaceamount};
+      margin-bottom: #{$spaceamount};
+    }
+    .px-sm-#{$space} {
+      padding-right: #{$spaceamount};
+      padding-left: #{$spaceamount};
+    }
+    .py-sm-#{$space} {
+      padding-top: #{$spaceamount};
+      padding-bottom: #{$spaceamount};
+    }
+  }
+}
+
+@each  $space, $spaceamount in $sizes {
+ @each $val, $side in $sides {
+   @if $side != null{
+     .m#{$val}-#{$space} {
+       margin-#{$side}: #{$spaceamount};
+     }
+     .p#{$val}-#{$space} {
+       padding-#{$side}: #{$spaceamount};
+     }
+   } @else {
+      .m-#{$space} {
+        margin: #{$spaceamount};
+      }
+      .p-#{$space} {
+        padding: #{$spaceamount};
+      }
+   }
+  }
+}
+
+@each  $space, $spaceamount in $sizes {
+  @each $val, $side in $sides {
+    @include pad {
+      @if $side != null{
+        .m#{$val}-md-#{$space} {
+          margin-#{$side}: #{$spaceamount};
+        }
+        .p#{$val}-md-#{$space} {
+          padding-#{$side}: #{$spaceamount};
+        }
+      } @else {
+       .m-md-#{$space} {
+         margin: #{$spaceamount};
+       }
+       .p-md-#{$space} {
+         padding: #{$spaceamount};
+       }
+      }
+    }
+  }
+}
+
+@each  $space, $spaceamount in $sizes {
+  @each $val, $side in $sides {
+    @include mobile {
+      @if $side != null{
+        .m#{$val}-sm-#{$space} {
+          margin-#{$side}: #{$spaceamount};
+        }
+        .p#{$val}-sm-#{$space} {
+          padding-#{$side}: #{$spaceamount};
+        }
+      } @else {
+       .m-sm-#{$space} {
+         margin: #{$spaceamount};
+       }
+       .p-sm-#{$space} {
+         padding: #{$spaceamount};
+       }
+      }
+   }
+ }
+}
+
+
+@each $width, $val in $widths {
+  .w-#{$width}{
+    width: #{$val};
+  }
+  @include pad{
+    .w-md-#{$width}{
+      width: #{$val};
+    }
+  }
+  @include mobile{
+    .w-sm-#{$width}{
+      width: #{$val};
+    }
+  }
+}

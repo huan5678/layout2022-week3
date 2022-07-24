@@ -1,0 +1,307 @@
+.container {
+  // width: min(100% - $gutter-width, 1296px);
+  // margin-inline: auto;
+  max-width: 1296px + $gutter-width;
+  margin: 0 auto;
+  padding-left: ($gutter-width / 2)*1px;
+  padding-right: ($gutter-width / 2)*1px;
+
+  @include pad {
+    // width: min(100% - $gutter-width, 696px);
+    max-width: 696px + $gutter-width*1px;
+  }
+
+  @include mobile {
+    // width: min(100% - $gutter-width, 348px);
+    max-width: 348px + $gutter-width*1px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: ($gutter-width / 2)*1px;
+  padding-right: ($gutter-width / 2)*1px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($gutter-width / 2)*1px;
+  margin-right: -($gutter-width / 2)*1px;
+}
+
+@include pad {
+  .row-sm {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($gutter-width / 2)*1px;
+    margin-right: -($gutter-width / 2)*1px;
+  }
+}
+
+.no-gutters {
+  margin-left: 0px;
+  margin-right: 0px;
+
+  > [class*='col-'] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.col {
+  max-width: 100% !important;
+  flex: 1 1 0% !important;
+  @include pad {
+    &-md {
+      max-width: 100% !important;
+      flex: 1 1 0% !important;
+    }
+  }
+  @include mobile {
+    &-sm {
+      max-width: 100% !important;
+      flex: 1 1 0% !important;
+    }
+  }
+}
+
+@for $i from 1 through $grid-num {
+  .col-#{$i} {
+    padding-left: ($gutter-width/2)*1px;
+    padding-right: ($gutter-width/2)*1px;
+    max-width: 100% * ($i / $grid-num);
+    flex: 0 0 (100% * ($i / $grid-num));
+  }
+}
+
+@include pad {
+  @for $i from 1 through $grid-num {
+    .col-md-#{$i} {
+      padding-left: ($gutter-width/2)*1px;
+      padding-right: ($gutter-width/2)*1px;
+      max-width: 100% * ($i / $grid-num);
+      flex: 0 0 (100% * ($i / $grid-num));
+    }
+  }
+}
+
+@include mobile {
+  @for $i from 1 through $grid-num {
+    .col-sm-#{$i} {
+      padding-left: ($gutter-width/2)*1px;
+      padding-right: ($gutter-width/2)*1px;
+      max-width: 100% * ($i / $grid-num);
+      flex: 0 0 (100% * ($i / $grid-num));
+    }
+  }
+}
+
+@each $dp, $val in $display {
+  .#{$dp} {
+    display: #{$val};
+  }
+}
+
+@each $dp, $val in $display {
+  @include pad {
+    .#{$dp}-md {
+      display: #{$val};
+    }
+  }
+}
+
+@each $dp, $val in $display {
+  @include mobile {
+    .#{$dp}-sm {
+      display: #{$val};
+    }
+  }
+}
+
+@each $key, $val in $flexDirection {
+  .flex-#{$key} {
+    flex-direction: $val;
+  }
+}
+
+@each $key, $val in $flexDirection {
+  @include pad {
+    .flex-md-#{$key} {
+      flex-direction: $val;
+    }
+  }
+}
+
+@each $key, $val in $flexDirection {
+  @include mobile {
+    .flex-sm-#{$key} {
+      flex-direction: $val;
+    }
+  }
+}
+
+@each $flex in $wrap {
+  .flex-#{$flex} {
+    flex-wrap: $flex;
+  }
+}
+
+@each $flex in $wrap {
+  @include pad {
+    .flex-md-#{$flex} {
+      flex-wrap: $flex;
+    }
+  }
+}
+
+@each $flex in $wrap {
+  @include mobile {
+    .flex-sm-#{$flex} {
+      flex-wrap: $flex;
+    }
+  }
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+  @include pad {
+    &-md {
+      flex: 1 1 auto;
+    }
+  }
+  @include mobile {
+    &-sm {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+
+@each $jc, $val in $justifyContent {
+  .justify-#{$jc} {
+    justify-content: #{$val};
+  }
+}
+
+@include pad {
+  @each $jc, $val in $justifyContent {
+    .justify-md-#{$jc} {
+      justify-content: #{$val};
+    }
+  }
+}
+
+@include mobile {
+  @each $jc, $val in $justifyContent {
+    .justify-sm-#{$jc} {
+      justify-content: #{$val};
+    }
+  }
+}
+
+@each $its, $val in $alignItems {
+  .items-#{$its} {
+    align-items: #{$val};
+  }
+}
+
+@each $its, $val in $alignItems {
+  @include pad {
+    .items-md-#{$its} {
+      align-items: #{$val};
+    }
+  }
+}
+
+@each $its, $val in $alignItems {
+  @include mobile {
+    .items-sm-#{$its} {
+      align-items: #{$val};
+    }
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .gap-#{$space} {
+    gap: #{$spaceamount};
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .gap-md-#{$space} {
+    @include pad {
+      gap: #{$spaceamount};
+    }
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .gap-sm-#{$space} {
+    @include mobile {
+      gap: #{$spaceamount};
+    }
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .row-gap-#{$space} {
+    row-gap: #{$spaceamount};
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .row-gap-md-#{$space} {
+    @include pad {
+      row-gap: #{$spaceamount};
+    }
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .row-gap-sm-#{$space} {
+    @include mobile {
+      row-gap: #{$spaceamount};
+    }
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .column-gap-#{$space} {
+    column-gap: #{$spaceamount};
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .column-gap-md-#{$space} {
+    @include pad {
+      column-gap: #{$spaceamount};
+    }
+  }
+}
+
+@each $space, $spaceamount in $sizes {
+  .column-gap-sm-#{$space} {
+    @include mobile {
+      column-gap: #{$spaceamount};
+    }
+  }
+}
+
+@for $i from 0 through 6 {
+  .order-#{$i} {
+    order: $i;
+  }
+  .order-md-#{$i} {
+    @include pad {
+      order: $i;
+    }
+  }
+  .order-sm-#{$i} {
+    @include mobile {
+      order: $i;
+    }
+  }
+}

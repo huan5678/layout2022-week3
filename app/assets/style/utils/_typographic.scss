@@ -1,0 +1,63 @@
+@each $key, $val in $fontSize {
+  .text-#{$key} {
+    font-size: #{$val};
+  }
+}
+
+@each $key, $val in $fontSize {
+  @include pad {
+    .text-md-#{$key} {
+      font-size: #{$val};
+    }
+  }
+}
+
+@each $key, $val in $fontSize {
+  @include mobile {
+    .text-sm-#{$key} {
+      font-size: #{$val};
+    }
+  }
+}
+
+@each $key , $val in $fontWeights {
+  .font-#{$key} {
+    font-weight: #{$val};
+  }
+}
+
+@each $key, $val in $fontWeights {
+  @include pad {
+    .font-md-#{$key} {
+      font-weight: #{$val};
+    }
+  }
+}
+
+@each $key, $val in $fontWeights {
+  @include mobile {
+    .font-sm-#{$key} {
+      font-weight: #{$val};
+    }
+  }
+}
+
+@each $val in $aligns {
+  .text-#{$val} {
+    text-align: #{$val};
+  }
+}
+@each $val in $aligns {
+  @include pad {
+    .text-md-#{$val} {
+      text-align: #{$val};
+    }
+  }
+}
+@each $val in $aligns {
+  @include mobile {
+    .text-sm-#{$val} {
+      text-align: #{$val};
+    }
+  }
+}

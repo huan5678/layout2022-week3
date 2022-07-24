@@ -1,0 +1,162 @@
+@use 'sass:math';
+
+$primary: #aa0601;
+$secondary: #650300;
+$light: #fbf2f2;
+$black: #000;
+$white: #fff;
+$gray: #707070;
+$gray-light: #dee2e6;
+$gray-dark: #555555;
+$brown: #5f3e2d;
+$brown-light: #b75929;
+
+$colors: (
+  primary: $primary,
+  primary-dark: $secondary,
+  primary-light: $light,
+  black: $black,
+  white: $white,
+  gray: $gray,
+  gray-dark: $gray-dark,
+  light: $light,
+);
+
+$base: 16;
+$baseSize: 16px;
+$spacer: 1rem;
+
+$defaultSize: 4;
+
+$gutter-width: 24;
+
+$grid-num: 12;
+
+$sizes: (
+  0: 0,
+  1: ( $defaultSize * 1 ) / $base * $spacer,
+  2: ( $defaultSize * 2 ) / $base * $spacer,
+  3: ( $defaultSize * 3 ) / $base * $spacer,
+  4: ( $defaultSize * 4 ) / $base * $spacer,
+  5: ( $defaultSize * 5 ) / $base * $spacer,
+  6: ( $defaultSize * 6 ) / $base * $spacer,
+  7: ( $defaultSize * 7 ) / $base * $spacer,
+  8: ( $defaultSize * 8 ) / $base * $spacer,
+  9: ( $defaultSize * 9 ) / $base * $spacer,
+  10: ( $defaultSize * 10 ) / $base * $spacer,
+  12: ( $defaultSize * 12 ) / $base * $spacer,
+  15: ( $defaultSize * 15 ) / $base * $spacer,
+  16: ( $defaultSize * 16 ) / $base * $spacer,
+  20: ( $defaultSize * 20 ) / $base * $spacer,
+  24: ( $defaultSize * 24 ) / $base * $spacer,
+  auto: auto,
+);
+
+$fontSize: (
+  base: $spacer,
+  sm: ( 14 / $base ) * $spacer,
+  md: ( 20 / $base ) * $spacer,
+  lg: ( 24 / $base ) * $spacer,
+  xl: ( 32 / $base ) * $spacer,
+  2xl: ( 36 / $base ) * $spacer,
+  3xl: ( 42 / $base ) * $spacer,
+  4xl: (48 / $base) * $spacer,
+  5xl: (64 / $base) * $spacer,
+);
+
+$fontWeights: (
+  thin: 100,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);
+
+$sides: (
+  '': null,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+
+$aligns: (left,center,right);
+
+$verticalAligns: (top,middle,bottom);
+
+$flexDirection: (
+  row: row,
+  row-reverse: row-reverse,
+  col: column,
+  col-reverse: column-reverse,
+);
+
+$justifyContent: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+);
+
+$alignItems: (
+  start: start,
+  end: end,
+  center: center,
+  stretch: stretch,
+);
+
+$display: (
+  none: none,
+  block: block,
+  flex: flex,
+  inline: inline,
+  inline-block: inline-block,
+  inline-flex: inline-flex,
+);
+
+$wrap: ( no-wrap, wrap, wrap-reverse );
+
+$widths: (
+  auto: auto,
+  20: 20%,
+  25: 25%,
+  40: 40%,
+  50: 50%,
+  60: 60%,
+  75: 75%,
+  80: 80%,
+  33: 33.333333%,
+  66: 66.666667%,
+  full: 100%,
+);
+
+$objectFit: (cover, contain, fill, none, scale-down);
+
+$bgSize: ( auto, cover, contain);
+
+$bgPos: (
+  center: center,
+  top: top,
+  right: right,
+  bottom: bottom,
+  left: left,
+  top-left: top left,
+  top-right: top right,
+  bottom-left: bottom left,
+  bottom-right: bottom right,
+);
+
+$bgRepeat: (
+  no-repeat,
+  repeat,
+  repeat-x,
+  repeat-y
+);
+
+$bgAttachment: (
+  fixed,
+  local,
+  scroll
+);

@@ -1,0 +1,25 @@
+@each $val in $objectFit {
+  .object-#{$val} {
+    object-fit: $val;
+  }
+}
+@each $val in $bgSize {
+  .bg-#{$val} {
+    background-size: $val;
+  }
+}
+@each $key, $val in $bgPos {
+  .bg-#{$key} {
+    background-position: $val;
+  }
+}
+@each $val in $bgRepeat {
+  .bg-#{$val} {
+    background-repeat: $val;
+  }
+}
+@each $val in $bgAttachment {
+  .bg-#{$val} {
+    background-attachment: $val;
+  }
+}
