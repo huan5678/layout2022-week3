@@ -139,3 +139,19 @@
     }
   }
 }
+
+@each $height, $val in $heights {
+  .h-#{$height}{
+    height: #{$val};
+  }
+  @include pad{
+    .h-md-#{$height}{
+      height: #{$val};
+    }
+  }
+  @include mobile{
+    .h-sm-#{$height}{
+      height: #{$val};
+    }
+  }
+}

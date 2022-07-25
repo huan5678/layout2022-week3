@@ -1,8 +1,19 @@
 @each $key, $val in $colors {
+  $darkColor: darken($val, 5%);
   .bg-#{$key} {
     background-color: #{$val};
+    &--hover {
+      &:hover {
+        background-color: #{$darkColor};
+      }
+    }
   }
   .text-#{$key} {
     color: #{$val};
+    &--hover {
+      &:hover {
+        color: #{$darkColor};
+      }
+    }
   }
 }

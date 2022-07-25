@@ -2,7 +2,7 @@
 .banner {
   height: 296px;
     &--#{$i}{
-      background-image: url('/assets/images/banner-#{$i}.png');
+      background-image: url('/assets/images/product-header-#{$i}.png');
     }
   }
 }
