@@ -165,20 +165,48 @@
   }
 }
 
-.flex-auto {
-  flex: 1 1 auto;
+.flex-{
+  &auto {
+    flex: 1 1 auto;
+  }
+  &none {
+    flex: none;
+  }
+  &1 {
+    flex: 1 1 0%;
+  }
+  &50 {
+    flex: 0 0 calc(50% - 12px);
+  }
   @include pad {
-    &-md {
+    &md-auto {
       flex: 1 1 auto;
+    }
+    &md-none {
+      flex: none;
+    }
+    &md-1 {
+      flex: 1 1 0%;
+    }
+    &md-50 {
+      flex: 0 0 calc(50% - 12px);
     }
   }
   @include mobile {
-    &-sm {
+    &sm-auto {
       flex: 1 1 auto;
+    }
+    &sm-none {
+      flex: none;
+    }
+    &sm-1 {
+      flex: 1 1 0%;
+    }
+    &sm-50 {
+      flex: 0 0 calc(50% - 12px);
     }
   }
 }
-
 
 @each $jc, $val in $justifyContent {
   .justify-#{$jc} {

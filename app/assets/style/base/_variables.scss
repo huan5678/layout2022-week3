@@ -74,6 +74,11 @@ $fontWeights: (
   black: 900,
 );
 
+$italic: (
+  not-italic: normal,
+  italic: italic,
+);
+
 $sides: (
   '': null,
   t: top,
