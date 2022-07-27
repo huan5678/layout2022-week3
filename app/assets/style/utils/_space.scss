@@ -140,6 +140,17 @@
   }
 }
 
+@each $width, $val in $widths {
+  .w-gutter-#{$width}{
+    width: calc(#{$val}-12px);
+  }
+  @include pad{
+    .w-gutter-md-#{$width}{
+      width: calc(#{$val}-12px);
+    }
+  }
+}
+
 @each $height, $val in $heights {
   .h-#{$height}{
     height: #{$val};
