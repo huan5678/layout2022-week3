@@ -79,6 +79,12 @@ $italic: (
   italic: italic,
 );
 
+$position: (
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+);
+
 $sides: (
   '': null,
   t: top,

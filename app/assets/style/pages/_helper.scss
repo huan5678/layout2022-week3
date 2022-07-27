@@ -5,6 +5,40 @@
   padding-bottom: 11.5px;
 }
 
+.header {
+  @include mobile {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+  }
+}
+
+.nav--list {
+  @include mobile {
+    background-color: $primary;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    flex-wrap: wrap;
+    gap: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    & > a {
+      width: 50%;
+      text-align: center;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      border: 1px solid $white;
+    }
+    &.active {
+      transform: translateY(100%);
+      opacity: 1;
+    }
+  }
+}
+
 .menu {
   font-size: 40px;
   &:hover {
@@ -112,3 +146,4 @@
   grid-auto-flow: row;
   grid-gap: .5rem;
 }
+

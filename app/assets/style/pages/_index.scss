@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  @include mobile {
+    padding-top: 5rem;
+    background-image: url('/assets/images/home-header-sm.png');
+  }
 }
 .future {
   &--layout {

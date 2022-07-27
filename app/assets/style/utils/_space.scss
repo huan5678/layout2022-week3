@@ -151,6 +151,22 @@
   }
 }
 
+@each $width, $val in $widths {
+  .max-w-#{$width} {
+    max-width: #{$val};
+  }
+  @include pad{
+    .max-w-md-#{$width} {
+      max-width: #{$val};
+    }
+  }
+  @include mobile{
+    .max-w-sm-#{$width} {
+      max-width: #{$val};
+    }
+  }
+}
+
 @each $height, $val in $heights {
   .h-#{$height}{
     height: #{$val};
@@ -163,6 +179,22 @@
   @include mobile{
     .h-sm-#{$height}{
       height: #{$val};
+    }
+  }
+}
+
+@each $key, $val in $position {
+  .#{$key}{
+    position: #{$val};
+  }
+  @include pad{
+    .#{$key}-md{
+      position: #{$val};
+    }
+  }
+  @include mobile{
+    .#{$key}-sm{
+      position: #{$val};
     }
   }
 }
