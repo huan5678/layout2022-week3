@@ -1,12 +1,12 @@
 .hero--section {
   height: 80vh;
-  background-image: url('/assets/images/home-header.png');
+  background-image: url('./assets/images/home-header.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   @include mobile {
     padding-top: 5rem;
-    background-image: url('/assets/images/home-header-sm.png');
+    background-image: url('./assets/images/home-header-sm.png');
   }
 }
 .future {
@@ -55,15 +55,15 @@
 
 
 .co-brand--section {
-  background-image: url('/assets/images/index-bg.png');
+  background-image: url('./assets/images/index-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   @include pad {
-    background-image: url('/assets/images/index-bg-md.png');
+    background-image: url('./assets/images/index-bg-md.png');
   }
   @include mobile {
-    background-image: url('/assets/images/index-bg-sm.png');
+    background-image: url('./assets/images/index-bg-sm.png');
   }
 }
 
