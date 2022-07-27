@@ -1,5 +1,0 @@
-@each $val in $verticalAligns {
-  .align-#{$val} {
-    vertical-align: $val;
-  }
-}
